@@ -137,7 +137,6 @@ int main() {
     return 1;
   }
 
-  // _scanf runs OK but values from pointers do not seem to be applied?
 
   _printf("i : %d, j : %d\n", i, j);
 
