@@ -47,14 +47,6 @@ int _printf(char *format, ...) {
   va_end(argp); // free the vararg list
 }
 
-int _atoi(char * st) {
-  int i = 0, j;
-  for ( j = 0; j < strlen(st); j++) {
-    i *= 10;
-    i += st[i] - 48;
-  }
-  return i;
-}
 
 int _scanf(char * format, ...) {
   va_list vlist;
@@ -127,7 +119,6 @@ int _scanf(char * format, ...) {
 
 
 int main() {
-  char buf[256];
   int i = 1, j = 2, r;
   
   printf("Selecciona ANCHOxALTO\n");
