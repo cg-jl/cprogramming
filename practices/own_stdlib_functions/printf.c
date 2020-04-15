@@ -7,7 +7,7 @@
 int _printf(char *format, ...) {
   /*
    * Gets arguments in the form of a format string
-   * and variables that to within the format string.
+   * and variables within the format string.
    * It parses the format string and prints characrers that 
    * are not format normally, but formats are printed correctly.
    *
