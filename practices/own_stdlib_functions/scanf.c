@@ -40,7 +40,8 @@ int _scanf(char * format, ...) {
          * of chars with bracket notation : %s[limit].
          */
         int limit ;
-        if ( *format == '[' ) {
+        if ( *(format + 1) == '[' ) {
+          format += 2;
           limit = 0;
           while (*format != ']') { 
             // If I am at end of string, return
@@ -56,7 +57,7 @@ int _scanf(char * format, ...) {
         int i = 0;
         while (*buf && limit) {
           bf[i++] = *buf;
-          limit++;
+          limit--;
           buf += 1;
         }
         got++;
@@ -75,17 +76,17 @@ int _scanf(char * format, ...) {
 
 
 int main() {
+  char buffer[5];
   int i = 1, j = 2, received;
   
-  printf("Selecciona ANCHOxALTO\n");
-
-  if ((received = _scanf("%dx%d", &i, &j)) != 2) { 
-    printf("Expected 2, got only %d\n", received);
+  printf("Format : %%s[5]:%%dx%%d\n");
+  if ((received = _scanf("%s[5]:%dx%d", buffer, &i, &j)) != 3) { 
+    printf("Expected 3, got only %d\n", received);
     return 1;
   }
 
 
-  printf("i : %d, j : %d\n", i, j);
+  printf("i : %d, j : %d\n, buffer : \"%s\"", i, j, buffer);
 
 
   return 0;
