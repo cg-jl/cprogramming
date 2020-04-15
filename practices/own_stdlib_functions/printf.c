@@ -5,6 +5,20 @@
 #include <stdarg.h>
 
 int _printf(char *format, ...) {
+  /*
+   * Gets arguments in the form of a format string
+   * and variables that to within the format string.
+   * It parses the format string and prints characrers that 
+   * are not format normally, but formats are printed correctly.
+   *
+   * Available formats:
+   *    - %c -> print a character
+   *    - %d -> print a decimal number
+   *    - %s -> print a string. Limits in the form [limit] are ignored
+   *    in this function.
+   *
+   *
+   * */
   va_list arg_list; // initialize vararg list
   va_start(arg_list, format);
   while ( *format ) {

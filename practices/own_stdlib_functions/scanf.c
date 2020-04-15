@@ -6,6 +6,20 @@
 
 
 int _scanf(char * format, ...) {
+  /*
+   * Gets as arguments a format string and
+   * pointers to variables. 
+   *
+   * Gets input and scans it in order
+   * to get the formatted result. In case of
+   * succeed, the function will return the total number
+   * of formats that were given.
+   *
+   * As of today, the %s[limit] is pretty restrictive
+   * and looks for a string exactly the length of the limit provided.
+   *
+   * TODO: add flexibility to scanf %s[limit]
+   * */
   va_list vlist;
   int argc = 0;
   char * ft_back = format;
