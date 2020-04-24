@@ -133,7 +133,7 @@ int main() {
     mergeSort(a, 0, 9);
 
     printf("AFTER SORTING\n");
-    printlnList(a, 2, 9);
+    printlnList(a, 0, 9);
 
 
 
