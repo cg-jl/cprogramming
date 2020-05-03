@@ -1,11 +1,9 @@
-
 #include "demoBubble.h"
 #include <ncurses.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 
-extern FILE *file;
 void UpdateBubble (Bubble *bubble) {
   if (!bubble || bubble->pos->y >= LINES) return;
   if (bubble->pos->x < 0 || bubble->pos->x >= COLS)

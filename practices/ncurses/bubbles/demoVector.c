@@ -1,9 +1,7 @@
-
-
 #include "demoVector.h"
+
 #include <math.h>
 #include <stdlib.h>
-
 
 Vector* VectorInit (int x, int y) {
   Vector *newvector = (Vector*) malloc (sizeof (Vector));
@@ -31,7 +29,4 @@ void VectorDiv (Vector *v, int x) {
   v->x /= x;
   v->y /= x;
 }
-
-
-
 

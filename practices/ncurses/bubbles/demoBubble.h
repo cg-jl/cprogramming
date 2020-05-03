@@ -1,8 +1,8 @@
 
 #pragma once
 
-#include <ncurses.h>
 #include "demoVector.h"
+#include <ncurses.h>
 
 typedef struct {
   Vector *pos;

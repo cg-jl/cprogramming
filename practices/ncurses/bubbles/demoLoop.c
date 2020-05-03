@@ -13,10 +13,7 @@ Bubble* temp;
 FILE *file;
 int i;
 
-extern int drawLoopMax;
-
 void setup (void) {
-  drawLoopMax = 100;
   bubbles = (Bubble *) malloc (sizeof (Bubble) * LINES - 1);
   for (i = 0; i < LINES; i++) {
     InitBubble (bubbles + i, i % LINES, i);
