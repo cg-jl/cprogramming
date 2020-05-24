@@ -4,11 +4,12 @@
 
 int main (void) {
     Node *head = NULL;
-    AppendList (&head, CreateNode ("tomato sauce"));
-    AppendList (&head, CreateNode ("berries"));
+    AppendList (&head, CreateNode ("esta lista"));
+    AppendList (&head, CreateNode ("no"));
+    AppendList (&head, CreateNode ("tiene elementos duplicados"));
     PrintList (&head);
+    AppendList (&head, CreateNode ("no"));
     AppendList (&head, CreateNode ("pizza"));
-    AppendList (&head, CreateNode ("berries"));
     PrintList (&head);
     FreeList (head);
     return 0;
