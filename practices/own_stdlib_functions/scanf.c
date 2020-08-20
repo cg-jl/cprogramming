@@ -69,7 +69,7 @@ int _scanf(char * format, ...) {
                
         char *bf = (char *) va_arg(vlist, char *);
         int i = 0;
-        while (*buf && limit) {
+        while (*buf && limit > 0) {
           bf[i++] = *buf;
           limit--;
           buf += 1;
